@@ -1,0 +1,82 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap');
+@import './assets/fonts/stylesheet.css';
+
+:root {
+    --rcot-color-yellow: #f7e64d;
+    --rcot-color-pink: #ffc2ff;
+    --rcot-color-white: #ffffff;
+    --rcot-color-blue: #7ee1e8;
+    --rcot-color-purple: #6f35a3;
+    --rcot-color-teal: #43cfb5;
+    --rcot-color-light-grey: #f0f0f0;
+    --rcot-color-lilac: #7575df;
+    --rcot-color-red: #e8705e;
+    --rcot-color-dark-teal: #003643;
+    --rcot-color-dark-grey: #616161;
+}
+
+body {
+    font-family: 'Nunito Sans', sans-serif;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+}
+form {
+    display: flex;
+    flex-direction: column;
+    width: 75%;
+    gap: 1rem;
+}
+.input {
+    display: flex;
+    flex-direction: column;
+}
+.form-item {
+    color: var(--rcot-color-purple);
+}
+
+input[type=text] {
+    font-family: inherit;
+    height: calc(1.5em + .75rem + 2px);
+    border: 2px solid rgba(0,54,67,0.5);
+    transition: border-color 0.15s ease-in-out,box-shadow 0.15s ease-in-out;
+    padding: .375rem;
+}
+input[type="text"]:hover,
+input[type="text"]:focus,
+input[type="text"]:active {
+    border-color: #00958f;
+    outline: 0;
+    box-shadow: 0 0 0 0.2rem rgba(0, 149, 143, 0.25);
+}
+input[type=submit] {
+    font-family: 'Cera Pro', sans-serif;
+    font-weight: bold;
+    background-color: var(--rcot-color-teal);
+    border-radius: 25px;
+    border: none;
+    color: var(--rcot-color-dark-teal);
+    padding: 16px 32px;
+    text-decoration: none;
+    margin: 4px 2px;
+    cursor: pointer;
+}
+
+#canvas-container {
+    width: 50%;
+    height: 50%;
+}
+
+#canvas-container canvas {
+    width: 100%;   /* Scales to the container's width */
+    height: 100%;  /* Scales to the container's height */
+}
+
+.dark-teal-icon {
+    color: var(--rcot-color-dark-teal); /* Use the CSS variable */
+    font-size: 24px; /* Adjust size if needed */
+    cursor: pointer; /* Optional: makes the icon appear clickable */
+}
+.dark-teal-icon.hidden {
+    opacity: 0;
+}
