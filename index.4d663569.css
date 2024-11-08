@@ -1,13 +1,6 @@
 @import "https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap";
 @font-face {
   font-family: Cera Pro;
-  src: local(Cera Pro), local(CeraPro-Regular), url("CeraPro-Regular.448c8b4c.woff2") format("woff2");
-  font-weight: normal;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: Cera Pro;
   src: local(Cera Pro Bold), local(CeraPro-Bold), url("CeraPro-Bold.2ce065a4.woff2") format("woff2");
   font-weight: bold;
   font-style: normal;
