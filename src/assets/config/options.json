@@ -55,7 +55,7 @@
     }
   },
   "cornersDotOptions": {
-    "type": "square",
+    "type": "dots",
     "color": "#43cfb5"
   },
   "cornersDotOptionsHelper": {
