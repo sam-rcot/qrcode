@@ -34,10 +34,11 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    /*min-height: 100vh;*/
-    width: 600px;
+    width: 100%;
+    max-width: 600px;
     padding: var(--spacing-large);
     background-color: var(--rcot-color-light-grey);
+    margin: 0 auto; /* Centers body content horizontally */
 }
 
 form {
@@ -51,16 +52,20 @@ form {
     border-radius: 8px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
     margin-bottom: var(--spacing-medium);
+    align-items: center; /* Centers elements within the form */
 }
 
 .input {
     display: flex;
     flex-direction: column;
+    width: 100%;
+    align-items: center; /* Centers input content */
 }
 
 .form-item {
     color: var(--rcot-color-purple);
     font-size: 1rem;
+    text-align: center; /* Centers form text */
 }
 
 input[type="text"] {
@@ -72,6 +77,9 @@ input[type="text"] {
     border-radius: 4px;
     font-size: 1rem;
     color: var(--rcot-color-dark-grey);
+    width: 100%;
+    max-width: 500px; /* Limits text input width */
+    margin: auto; /* Centers input if narrower than form */
 }
 
 input[type="text"]:hover,
@@ -94,6 +102,9 @@ input[type="submit"] {
     font-size: 1rem;
     text-align: center;
     transition: background-color 0.3s ease, transform 0.2s ease;
+    width: 100%;
+    max-width: 200px;
+    margin: auto; /* Centers button within form */
 }
 
 /* Submit button hover animation */
@@ -109,20 +120,22 @@ input[type="submit"]:active {
 
 #canvas-container {
     width: 100%;
-    max-width: 100%;
+    padding: var(--spacing-small);
     display: flex;
     justify-content: center;
     align-items: center;
     border-radius: 8px;
-    overflow: clip;
+    overflow: hidden;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
     margin-bottom: var(--spacing-small);
+    background-color: var(--rcot-color-white);
 }
 
 #canvas-container canvas {
     width: 100%;   /* Scales to the container's width */
     max-width: 100%;
     height: auto;  /* Maintains aspect ratio */
+
 }
 
 .dark-teal-icon {
@@ -130,6 +143,10 @@ input[type="submit"]:active {
     font-size: 24px;
     cursor: pointer;
     transition: opacity 0.3s ease, transform 0.2s ease;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: var(--spacing-medium); /* Adds space above icon */
 }
 
 .dark-teal-icon.hidden {
