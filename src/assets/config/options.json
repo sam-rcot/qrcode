@@ -12,8 +12,8 @@
   "imageOptions": {
     "saveAsBlob": true,
     "hideBackgroundDots": true,
-    "imageSize": 0.4,
-    "margin": 10
+    "imageSize": 0.5,
+    "margin": 25
   },
   "dotsOptions": {
     "type": "dots",
