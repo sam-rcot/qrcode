@@ -1,0 +1,32 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap');
+@import 'src/assets/fonts/stylesheet.css';
+@import './components/form/Form.scss';
+@import 'src/assets/styles/variables.scss';
+
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Nunito Sans', sans-serif;
+  display: flex;
+  gap: 1rem;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 600px;
+  background-color: $rcot-color-light-grey;
+  margin: 0 auto; // Centers body content horizontally
+  & > * {
+    flex-shrink: 1; // Allow shrinking to fit within the container
+    flex-grow: 1; // Allow growing to fill available space
+    flex-basis: 0; // Start with no inherent size
+    max-width: 100%; // Prevent children from exceeding container width
+    max-height: 100%; // Prevent children from exceeding container height
+  }
+}

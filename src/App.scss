@@ -1,0 +1,14 @@
+@import 'src/assets/styles/variables.scss';
+
+#App {
+  display: flex;
+  flex-direction: column; // Layout is vertical
+  align-items: center;
+  justify-content: flex-start; // Vertically center align (optional for fullscreen layouts)
+  gap: 1rem; // 1rem gap between form and code components
+  width: 100%; // Ensure container takes the full width
+  height: 100vh; // Full viewport height for vertical centering
+  background-color: $rcot-color-light-grey; // Optional background color
+  padding: 2rem; // Add some padding around the container
+  box-sizing: border-box; // Include padding in the element's total width/height
+}
