@@ -1,5 +1,5 @@
 import React, { useEffect, useRef, useState } from 'react';
-import QRCodeStyling, {DrawType} from "qr-code-styling";
+import QRCodeStyling, { ShapeType, DrawType } from "qr-code-styling";
 import options from '../../assets/config/options.json';
 import logo from '../../assets/images/logo.svg';
 import printLogo from '../../assets/images/web_logo.svg';
@@ -28,13 +28,16 @@ const Code: React.FC<CodeProps> = ({ formValues }) => {
             ...options,
             data: formValues.url, // Set the QR code data to the URL
             image: formValues.useLogo ? logo : printLogo,
-            type: options.type as DrawType
+            type: options.type as DrawType,
+            shape: options.shape as ShapeType,
         };
 
         // Clear previous QR code
         if (qrCodeInstance.current) {
+            // @ts-ignore
             qrCodeInstance.current.update(qrOptions);
         } else {
+            // @ts-ignore
             qrCodeInstance.current = new QRCodeStyling(qrOptions);
         }
 
@@ -52,7 +55,13 @@ const Code: React.FC<CodeProps> = ({ formValues }) => {
         if (!qrCodeInstance.current) return;
 
         const qrBlob = await qrCodeInstance.current.getRawData("png");
+        if (!qrBlob) {
+            console.error("QR code blob is null.");
+            return;
+        }
+
         const downloadLink = document.createElement('a');
+        // @ts-ignore
         downloadLink.href = URL.createObjectURL(qrBlob);
         downloadLink.download = 'qr-code.png';
         downloadLink.click();
