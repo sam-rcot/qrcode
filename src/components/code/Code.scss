@@ -1,9 +1,11 @@
-@import '../../assets/styles/variables';
+@import "../../assets/styles/variables";
+
 #Code {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
+
 #canvas-container {
   width: 100%;
   padding: $spacing-small;
@@ -28,7 +30,7 @@
 }
 
 .download-button {
-  font-family: 'Cera Pro', sans-serif;
+  font-family: "Cera Pro", sans-serif;
   background-color: $rcot-color-teal; // Transparent background
   border: 2px solid $rcot-color-teal; // Border in dark teal
   color: $rcot-color-dark-teal; // Text and icon color
@@ -39,7 +41,9 @@
   display: inline-flex;
   align-items: center;
   gap: 8px; // Space between the icon and text
-  transition: background-color 0.3s ease, color 0.3s ease;
+  transition:
+    background-color 0.3s ease,
+    color 0.3s ease;
 
   &:hover {
     background-color: $rcot-color-dark-teal; // Dark teal background on hover

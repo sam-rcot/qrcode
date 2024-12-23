@@ -1,8 +1,7 @@
-@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap');
-@import 'src/assets/fonts/stylesheet.css';
-@import './components/form/Form.scss';
-@import 'src/assets/styles/variables.scss';
-
+@import url("https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap");
+@import "src/assets/fonts/stylesheet.css";
+@import "./components/form/Form.scss";
+@import "src/assets/styles/variables.scss";
 
 *,
 *::before,
@@ -13,7 +12,7 @@
 }
 
 body {
-  font-family: 'Nunito Sans', sans-serif;
+  font-family: "Nunito Sans", sans-serif;
   display: flex;
   gap: 1rem;
   flex-direction: column;
@@ -22,6 +21,7 @@ body {
   width: 600px;
   background-color: $rcot-color-light-grey;
   margin: 0 auto; // Centers body content horizontally
+
   & > * {
     flex-shrink: 1; // Allow shrinking to fit within the container
     flex-grow: 1; // Allow growing to fill available space
