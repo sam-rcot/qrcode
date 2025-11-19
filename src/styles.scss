@@ -56,20 +56,22 @@ form {
 .input {
     display: flex;
     flex-direction: column;
+    gap: 0.25rem;
     width: 100%;
-    align-items: center; // Centers input content
+    align-items: flex-start // Centers input content
 }
 
 .form-item {
-    color: $rcot-color-purple;
+    color: $rcot-color-dark-teal;
     font-size: 1rem;
-    text-align: center; // Centers form text
+    font-weight: bold;
+    text-align: left; // Centers form text
 }
 
 input[type="text"] {
     font-family: inherit;
     height: calc(1.5em + .75rem + 2px);
-    border: 2px solid rgba(0, 54, 67, 0.5);
+    border: 1px solid rgba(0, 54, 67, 0.5);
     transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
     padding: .5rem;
     border-radius: 4px;
@@ -90,7 +92,7 @@ input[type="text"] {
 
 input[type="submit"] {
     font-family: 'Cera Pro', sans-serif;
-    font-weight: bold;
+    font-weight: 700;
     background-color: $rcot-color-teal;
     border-radius: 25px;
     border: none;
@@ -157,7 +159,27 @@ input[type="submit"] {
         transform: scale(1);
     }
 }
+#qrType {
+     font-family: inherit;
+    height: calc(1.5em + .75rem + 2px);
+    border: 1px solid rgba(0, 54, 67, 0.5);
+    transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+    padding: .5rem;
+    border-radius: 4px;
+    font-size: 1rem;
+    color: $rcot-color-dark-grey;
+    width: 100%;
+    max-width: 500px; // Limits text input width
+    margin: auto; // Centers input if narrower than form
 
+    &:hover,
+    &:focus,
+    &:active {
+        border-color: #00958f;
+        outline: none;
+        box-shadow: 0 0 0 0.2rem rgba(0, 149, 143, 0.25);
+    }
+}
 .checkbox-container {
     display: flex;
     flex-direction: row-reverse;

@@ -42,7 +42,7 @@
           type="text"
           name="utmMedium"
           id="utmMedium"
-          placeholder="qr-code"
+          placeholder="qrcode"
         />
       </div>
       <div class="input">
@@ -53,15 +53,22 @@
           type="text"
           name="utmCampaign"
           id="utmCampaign"
-          placeholder="otweek-25"
+          placeholder="otweek25"
         />
       </div>
-      <select name="qrType" id="qrType">
-        <option value="web">Web</option>
-        <option value="email">Email</option>
-        <option value="contact">Contact</option>
-        <option value="text">Text</option>
-      </select>
+      <div class="input">
+        <label for="qrType"
+          ><span class="form-item">QR code type: </span></label
+        >
+
+        <select name="qrType" id="qrType">
+          <option value="web">Web</option>
+          <option value="email">Email</option>
+          <option value="contact">Contact</option>
+          <option value="text">Text</option>
+        </select>
+      </div>
+
       <label class="checkbox-container form-item"
         >Use web logo
         <input type="checkbox" checked="checked" />
