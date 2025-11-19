@@ -13,8 +13,20 @@
     <title>RCOT QR code generator</title>
   </head>
   <body>
+    <h1>RCOT QR code generator</h1>
     <form id="form">
       <div class="input">
+        <label for="qrType"
+          ><span class="form-item">QR code type: </span></label
+        >
+        <select name="qrType" id="qrType">
+          <option value="web">Web</option>
+          <option value="email">Email</option>
+          <option value="contact">Contact</option>
+          <option value="text">Text</option>
+        </select>
+      </div>
+      <div class="input" id="urlInput">
         <label for="url"><span class="form-item">Page URL: </span></label>
         <input
           type="text"
@@ -23,7 +35,56 @@
           placeholder="rcot.co.uk/your-url"
         />
       </div>
-      <div class="input">
+      <div class="input" id="emailInput" style="display: none">
+        <label for="email"><span class="form-item">Email: </span></label>
+        <input
+          type="email"
+          name="email"
+          id="email"
+          placeholder="hello@rcot.co.uk"
+        />
+      </div>
+      <div class="input" id="subjectInput" style="display: none">
+        <label for="subject"><span class="form-item">Subject: </span></label>
+        <input
+          type="text"
+          name="subject"
+          id="subject"
+          placeholder="Email subject (optional)"
+        />
+      </div>
+      <div class="input" id="nameInput" style="display: none">
+        <label for="name"><span class="form-item">Name: </span></label>
+        <input type="text" name="name" id="name" placeholder="Full Name" />
+      </div>
+      <div class="input" id="phoneInput" style="display: none">
+        <label for="phone"><span class="form-item">Phone: </span></label>
+        <input
+          type="tel"
+          name="phone"
+          id="phone"
+          placeholder="+44 1234 567890"
+        />
+      </div>
+      <div class="input" id="contactEmailInput" style="display: none">
+        <label for="contactEmail"><span class="form-item">Email: </span></label>
+        <input
+          type="email"
+          name="contactEmail"
+          id="contactEmail"
+          placeholder="contact@rcot.co.uk"
+        />
+      </div>
+      <div class="input" id="textInput" style="display: none">
+        <label for="text"><span class="form-item">Text: </span></label>
+        <textarea
+          name="text"
+          id="text"
+          placeholder="Enter your text here"
+          rows="4"
+        ></textarea>
+      </div>
+      <div class="input" id="utmSourceInput">
         <label for="utmSource"
           ><span class="form-item">UTM source: </span></label
         >
@@ -34,7 +95,7 @@
           placeholder="OTnews"
         />
       </div>
-      <div class="input">
+      <div class="input" id="utmMediumInput">
         <label for="utmMedium"
           ><span class="form-item">UTM medium: </span></label
         >
@@ -45,7 +106,7 @@
           placeholder="qrcode"
         />
       </div>
-      <div class="input">
+      <div class="input" id="utmCampaignInput">
         <label for="utmCampaign"
           ><span class="form-item">UTM campaign: </span></label
         >
@@ -56,28 +117,18 @@
           placeholder="otweek25"
         />
       </div>
-      <div class="input">
-        <label for="qrType"
-          ><span class="form-item">QR code type: </span></label
-        >
-
-        <select name="qrType" id="qrType">
-          <option value="web">Web</option>
-          <option value="email">Email</option>
-          <option value="contact">Contact</option>
-          <option value="text">Text</option>
-        </select>
-      </div>
-
       <label class="checkbox-container form-item"
         >Use web logo
         <input type="checkbox" checked="checked" />
         <span class="checkmark"></span>
       </label>
       <input type="submit" value="Generate QR code" />
+      <div id="downloadButton"></div>
     </form>
+
     <div id="canvas-container"></div>
-    <div id="downloadButton"></div>
+
+    <!-- <span id="downloadButtonText" style="display: none">Download QR code</span> -->
     <script src="index.js" type="module"></script>
   </body>
 </html>
