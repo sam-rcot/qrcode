@@ -1,33 +1,77 @@
 <!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport"
-          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="styles.scss">
-    <link rel="icon" type="image/svg+xml" href="./assets/images/web_logo.svg"/>
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"
+    />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="styles.scss" />
+    <link rel="icon" type="image/svg+xml" href="./assets/images/web_logo.svg" />
     <script src="https://unpkg.com/@bitjson/qr-code@1.0.2/dist/qr-code.js"></script>
     <title>RCOT QR code generator</title>
-</head>
-<body>
-<form id="form">
-    <div class="input"><label for="url"><span class="form-item">Page URL: </span></label>
-        <input type="text" name="url" id="url" placeholder="rcot.co.uk/your-url"></div>
-    <select name="qrType" id="qrType">
+  </head>
+  <body>
+    <form id="form">
+      <div class="input">
+        <label for="url"><span class="form-item">Page URL: </span></label>
+        <input
+          type="text"
+          name="url"
+          id="url"
+          placeholder="rcot.co.uk/your-url"
+        />
+      </div>
+      <div class="input">
+        <label for="utmSource"
+          ><span class="form-item">UTM source: </span></label
+        >
+        <input
+          type="text"
+          name="utmSource"
+          id="utmSource"
+          placeholder="OTnews"
+        />
+      </div>
+      <div class="input">
+        <label for="utmMedium"
+          ><span class="form-item">UTM medium: </span></label
+        >
+        <input
+          type="text"
+          name="utmMedium"
+          id="utmMedium"
+          placeholder="qr-code"
+        />
+      </div>
+      <div class="input">
+        <label for="utmCampaign"
+          ><span class="form-item">UTM campaign: </span></label
+        >
+        <input
+          type="text"
+          name="utmCampaign"
+          id="utmCampaign"
+          placeholder="otweek-25"
+        />
+      </div>
+      <select name="qrType" id="qrType">
         <option value="web">Web</option>
         <option value="email">Email</option>
         <option value="contact">Contact</option>
         <option value="text">Text</option>
-    </select>
-    <label class="checkbox-container form-item">Use web logo
-        <input type="checkbox" checked="checked">
+      </select>
+      <label class="checkbox-container form-item"
+        >Use web logo
+        <input type="checkbox" checked="checked" />
         <span class="checkmark"></span>
-    </label>
-    <input type="submit" value="Generate QR code">
-</form>
-<div id="canvas-container"></div>
-<div id="downloadButton"></div>
-<script src="index.js" type="module"></script>
-</body>
+      </label>
+      <input type="submit" value="Generate QR code" />
+    </form>
+    <div id="canvas-container"></div>
+    <div id="downloadButton"></div>
+    <script src="index.js" type="module"></script>
+  </body>
 </html>
+

@@ -7,7 +7,7 @@
   "qrOptions": {
     "typeNumber": 0,
     "mode": "Byte",
-    "errorCorrectionLevel": "Q"
+    "errorCorrectionLevel": "H"
   },
   "imageOptions": {
     "saveAsBlob": true,
@@ -85,3 +85,4 @@
     }
   }
 }
+
